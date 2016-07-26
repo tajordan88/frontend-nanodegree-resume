@@ -112,13 +112,13 @@ var education = {
         "location" : "Riverside, CA",
         "degree" : "Bachelor of Science",
         "major" : "Sociology",
-        "dates" : "2009-2013",
+        "dates" : "2009 - 2013",
         "url" : "http://www.ucr.edu/"
     },
     "onlineCourses" : {
         "title" : "Front-End Nanodegree",
         "school" : "Udacity",
-        "dates" : "2016-present ",
+        "dates" : "2016 - present ",
         "url" : "https://www.udacity.com/"
     },
     "display" : "function"
@@ -208,13 +208,13 @@ $("#workExperience").append(formattedHTMLworkDescription);
 var projects = {
     "portfolio" : {
         "title" : "Jordan Ta Designs",
-        "dates" : "2013-2016",
+        "dates" : "2013 - 2016",
         "description" : "This website contains a sampling of projects I've built or worked on in the past.",
         "images" : "images/JordanPortfolio.png"
     },
     "lighting" : {
         "title" : "Cheap Lighting and Stage Designs",
-        "dates" : "2016-present",
+        "dates" : "2016 - present",
         "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
         "images" : "images/JordanPortfolio.png"
     }

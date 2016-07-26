@@ -77,13 +77,13 @@ $("#header").prepend(formattedRole);
 $("#header").prepend(formattedName);
 $("#header").append(formattedHTMLwelcomeMsg);
 
+$("#topContacts").append(formattedHTMLmobile);
+$("#topContacts").append(formattedHTMLemail);
+$("#topContacts").append(formattedHTMLgithub);
+$("#topContacts").append(formattedHTMLblog);
+$("#topContacts").append(formattedHTMLlocation);
 $("#header").append(formattedHTMLbioPic);
-$("#header").append(formattedContactInfo);
-$("#header").append(formattedHTMLmobile);
-$("#header").append(formattedHTMLemail);
-$("#header").append(formattedHTMLgithub);
-$("#header").append(formattedHTMLblog);
-$("#header").append(formattedHTMLlocation);
+
 
 
 /* SKILLS */
@@ -97,10 +97,10 @@ var formattedHTMLskills3 = HTMLskills.replace("%data%", skills[3]);
 
 if (bio.skills != "") {
     $("#header").append(HTMLskillsStart);
-    $("#skills").append(formattedHTMLskills0);
-    $("#skills").append(formattedHTMLskills1);
-    $("#skills").append(formattedHTMLskills2);
-    $("#skills").append(formattedHTMLskills3);
+    $("#skills-h3").append(formattedHTMLskills0);
+    $("#skills-h3").append(formattedHTMLskills1);
+    $("#skills-h3").append(formattedHTMLskills2);
+    $("#skills-h3").append(formattedHTMLskills3);
 }
 
 

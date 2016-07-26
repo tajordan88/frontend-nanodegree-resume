@@ -153,19 +153,46 @@ $("#education").append(formattedHTMLonlineURL);
 
 
 /* WORK */
-var work = {}
-work.employer = "Creedenz";
-work.title = "Programmer Analyst";
-work.years = "2015-2016";
-work.location = "Riverside";
-work.description = "Developed front and back end for Creedenz CXM CRM software."
+var work = {
+    "jobs" : {
+        "creedenz" : {
+            "employer" : "Creedenz Solutions",
+            "title" : "Programmer Analyst",
+            "location" : "Riverside, CA",
+            "dates" : "February 2015 - June 2016",
+            "description" : "Developed custom CRM (Customer Relationship Management) systems for clients using MySQL and Javascript."
+        },
+        "dbm" : {
+            "employer" : "Database Marketing Group",
+            "title" : "Dynamic Media Developer",
+            "location" : "Irvine, CA",
+            "dates" : "April 2014 - December 2014",
+            "description" : "Developed front and back end for Creedenz CXM CRM software."
+        },
+        "a2f" : {
+            "employer" : "Acts2Fellowship",
+            "title" : "Assistant Web Developer (Internship Completed)",
+            "location" : "Riverside, CA",
+            "dates" : "March 2013 - April 2014",
+            "description" : "Developed front and back end for Creedenz CXM CRM software."
+        },
+        "contego" : {
+            "employer" : "Contego Spa Designs",
+            "title" : "Web Developer/Marketing Assistant (Contract Position Completed)",
+            "location" : "Westminster, CA",
+            "dates" : "August 2013 - January 2014",
+            "description" : "Developed front and back end for Creedenz CXM CRM software."
+        }
+    },
+    "display" : "function"
+}
 
 
-var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.employer);
-var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.title);
-var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.years);
-var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.location);
-var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.description);
+var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs.creedenz.employer);
+var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs.creedenz.title);
+var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs.creedenz.dates);
+var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs.creedenz.location);
+var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs.creedenz.description);
 
 
 $("#workExperience").append(HTMLworkStart);
@@ -179,17 +206,25 @@ $("#workExperience").append(formattedHTMLworkDescription);
 
 /* PROJECTS */
 var projects = {
-    "title" : "Cheap Lighting and Stage Designs",
-    "dates" : "2016",
-    "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
-    "img" : ""
+    "portfolio" : {
+        "title" : "Jordan Ta Designs",
+        "dates" : "2013-2016",
+        "description" : "This website contains a sampling of projects I've built or worked on in the past.",
+        "images" : "images/JordanPortfolio.png"
+    },
+    "lighting" : {
+        "title" : "Cheap Lighting and Stage Designs",
+        "dates" : "2016-present",
+        "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
+        "images" : "images/JordanPortfolio.png"
+    }
 }
 
 
-var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.title);
-var formattedHTMLprojectDates = HTMLprojectDates.replace("%data%", projects.dates);
-var formattedHTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects.description);
-//var formattedHTMLprojectImage = HTMLprojectImage.replace("%data", projects.img);
+var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.portfolio.title);
+var formattedHTMLprojectDates = HTMLprojectDates.replace("%data%", projects.portfolio.dates);
+var formattedHTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects.portfolio.description);
+var formattedHTMLprojectImage = HTMLprojectImage.replace("%data", projects.portfolio.images);
 
 
 $("#projects").append(HTMLprojectStart);

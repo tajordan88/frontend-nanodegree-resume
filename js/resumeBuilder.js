@@ -105,6 +105,53 @@ if (bio.skills != "") {
 
 
 
+/* EDUCATION */
+var education = {
+    "schools" : {
+        "name" : "University of California Riverside",
+        "location" : "Riverside, CA",
+        "degree" : "Bachelor of Science",
+        "major" : "Sociology",
+        "dates" : "2009-2013",
+        "url" : "http://www.ucr.edu/"
+    },
+    "onlineCourses" : {
+        "title" : "Front-End Nanodegree",
+        "school" : "Udacity",
+        "dates" : "2016-present ",
+        "url" : "https://www.udacity.com/"
+    },
+    "display" : "function"
+}
+
+
+var formattedHTMLschoolName = HTMLschoolName.replace("%data%", education.schools["name"]);
+var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", education.schools["degree"]);
+var formattedHTMLschoolDates = HTMLschoolDates.replace("%data%", education.schools["dates"]);
+var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", education.schools["location"]);
+var formattedHTMLschoolMajor = HTMLschoolMajor.replace("%data%", education.schools["major"]);
+
+var formattedHTMLonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses["title"]);
+var formattedHTMLonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses["school"]);
+var formattedHTMLonlineDates = HTMLonlineDates.replace("%data%", education.onlineCourses["dates"]);
+var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses["url"]);
+
+
+$("#education").append(HTMLschoolStart);
+$("#education").append(formattedHTMLschoolName);
+$("#education").append(formattedHTMLschoolDegree);
+$("#education").append(formattedHTMLschoolDates);
+$("#education").append(formattedHTMLschoolLocation);
+$("#education").append(formattedHTMLschoolMajor);
+
+$("#education").append(HTMLonlineClasses);
+$("#education").append(formattedHTMLonlineTitle);
+$("#education").append(formattedHTMLonlineSchool);
+$("#education").append(formattedHTMLonlineDates);
+$("#education").append(formattedHTMLonlineURL);
+
+
+
 /* WORK */
 var work = {}
 work.employer = "Creedenz";
@@ -153,28 +200,6 @@ $("#projects").append(formattedHTMLprojectDescription);
 
 
 
-/* EDUCATION */
-var education = {}
-education["name"] = "University of California Riverside";
-education["degree"] = "Bachelor of Science";
-education["years"] = "2009-2013";
-education["city"] = "Riverside, CA";
-education["major"] = "Sociology";
-
-
-var formattedHTMLschoolName = HTMLschoolName.replace("%data%", education["name"]);
-var formattedHTMLschoolDegree = HTMLschoolDegree.replace("%data%", education["degree"]);
-var formattedHTMLschoolDates = HTMLschoolDates.replace("%data%", education["years"]);
-var formattedHTMLschoolLocation = HTMLschoolLocation.replace("%data%", education["city"]);
-var formattedHTMLschoolMajor = HTMLschoolMajor.replace("%data%", education["major"]);
-
-
-$("#education").append(HTMLschoolStart);
-$("#education").append(formattedHTMLschoolName);
-$("#education").append(formattedHTMLschoolDegree);
-$("#education").append(formattedHTMLschoolDates);
-$("#education").append(formattedHTMLschoolLocation);
-$("#education").append(formattedHTMLschoolMajor);
 
 
 

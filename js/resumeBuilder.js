@@ -154,53 +154,57 @@ $("#education").append(formattedHTMLonlineURL);
 
 /* WORK */
 var work = {
-    "jobs" : {
-        "creedenz" : {
+    "jobs" : [
+        {
             "employer" : "Creedenz Solutions",
             "title" : "Programmer Analyst",
             "location" : "Riverside, CA",
             "dates" : "February 2015 - June 2016",
             "description" : "Developed custom CRM (Customer Relationship Management) systems for clients using MySQL and Javascript."
         },
-        "dbm" : {
+        {
             "employer" : "Database Marketing Group",
             "title" : "Dynamic Media Developer",
             "location" : "Irvine, CA",
             "dates" : "April 2014 - December 2014",
             "description" : "Developed front and back end for Creedenz CXM CRM software."
         },
-        "a2f" : {
+        {
             "employer" : "Acts2Fellowship",
             "title" : "Assistant Web Developer (Internship Completed)",
             "location" : "Riverside, CA",
             "dates" : "March 2013 - April 2014",
             "description" : "Developed front and back end for Creedenz CXM CRM software."
         },
-        "contego" : {
+        {
             "employer" : "Contego Spa Designs",
             "title" : "Web Developer/Marketing Assistant (Contract Position Completed)",
             "location" : "Westminster, CA",
             "dates" : "August 2013 - January 2014",
             "description" : "Developed front and back end for Creedenz CXM CRM software."
         }
-    },
+        ],
     "display" : "function"
 }
 
+for (job in work.jobs) {
+    $("#workExperience").append(HTMLworkStart);
 
-var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs.creedenz.employer);
-var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs.creedenz.title);
-var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs.creedenz.dates);
-var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs.creedenz.location);
-var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs.creedenz.description);
+    formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+
+    $("#workExperience").append(formattedHTMLworkEmployer);
+    $("#workExperience").append(formattedHTMLworkTitle);
+    $("#workExperience").append(formattedHTMLworkDates);
+    $("#workExperience").append(formattedHTMLworkLocation);
+    $("#workExperience").append(formattedHTMLworkDescription);
+
+}
 
 
-$("#workExperience").append(HTMLworkStart);
-$("#workExperience").append(formattedHTMLworkEmployer);
-$("#workExperience").append(formattedHTMLworkTitle);
-$("#workExperience").append(formattedHTMLworkDates);
-$("#workExperience").append(formattedHTMLworkLocation);
-$("#workExperience").append(formattedHTMLworkDescription);
 
 
 
@@ -240,10 +244,12 @@ $("#projects").append(formattedHTMLprojectDescription);
 
 
 
-
+/*
 for (var i=0; i<9; i++) {
     console.log(i);
 }
+*/
+
 
 
 

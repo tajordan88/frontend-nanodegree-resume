@@ -167,21 +167,21 @@ var work = {
             "title" : "Dynamic Media Developer",
             "location" : "Irvine, CA",
             "dates" : "April 2014 - December 2014",
-            "description" : "Developed front and back end for Creedenz CXM CRM software."
+            "description" : "Customized and quality assured HTML and CSS for emails, testing cross-email client/cross-browser/cross-device quality of responsive design for large clients such as BudgetBlinds, and internally for McDonalds, and Subway."
         },
         {
             "employer" : "Acts2Fellowship",
             "title" : "Assistant Web Developer (Internship Completed)",
             "location" : "Riverside, CA",
             "dates" : "March 2013 - April 2014",
-            "description" : "Developed front and back end for Creedenz CXM CRM software."
+            "description" : "Developed a responsive splash page using HTML, CSS, PHP, and Twitter Bootstrap."
         },
         {
             "employer" : "Contego Spa Designs",
             "title" : "Web Developer/Marketing Assistant (Contract Position Completed)",
             "location" : "Westminster, CA",
             "dates" : "August 2013 - January 2014",
-            "description" : "Developed front and back end for Creedenz CXM CRM software."
+            "description" : "Designed and built front page banners, uploading using Wordpress CMS."
         }
         ],
     "display" : "function"
@@ -190,18 +190,17 @@ var work = {
 for (job in work.jobs) {
     $("#workExperience").append(HTMLworkStart);
 
-    formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-    formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-    formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+    var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+    var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+    var formattedEmployerTitle = formattedHTMLworkEmployer + formattedHTMLworkTitle;
+    var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+    var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+    var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
-    $("#workExperience").append(formattedHTMLworkEmployer);
-    $("#workExperience").append(formattedHTMLworkTitle);
-    $("#workExperience").append(formattedHTMLworkDates);
-    $("#workExperience").append(formattedHTMLworkLocation);
-    $("#workExperience").append(formattedHTMLworkDescription);
-
+    $(".work-entry:last").append(formattedEmployerTitle);
+    $(".work-entry:last").append(formattedHTMLworkDates);
+    $(".work-entry:last").append(formattedHTMLworkLocation);
+    $(".work-entry:last").append(formattedHTMLworkDescription);
 }
 
 

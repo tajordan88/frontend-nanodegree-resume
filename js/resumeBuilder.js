@@ -187,23 +187,25 @@ var work = {
     "display" : "function"
 }
 
-for (job in work.jobs) {
-    $("#workExperience").append(HTMLworkStart);
+var displayWork = function() {
+    for (job in work.jobs) {
+        $("#workExperience").append(HTMLworkStart);
 
-    var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
-    var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
-    var formattedEmployerTitle = formattedHTMLworkEmployer + formattedHTMLworkTitle;
-    var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
-    var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
-    var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
+        var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
+        var formattedHTMLworkTitle = HTMLworkTitle.replace("%data%", work.jobs[job].title);
+        var formattedEmployerTitle = formattedHTMLworkEmployer + formattedHTMLworkTitle;
+        var formattedHTMLworkDates = HTMLworkDates.replace("%data%", work.jobs[job].dates);
+        var formattedHTMLworkLocation = HTMLworkLocation.replace("%data%", work.jobs[job].location);
+        var formattedHTMLworkDescription = HTMLworkDescription.replace("%data%", work.jobs[job].description);
 
-    $(".work-entry:last").append(formattedEmployerTitle);
-    $(".work-entry:last").append(formattedHTMLworkDates);
-    $(".work-entry:last").append(formattedHTMLworkLocation);
-    $(".work-entry:last").append(formattedHTMLworkDescription);
+        $(".work-entry:last").append(formattedEmployerTitle);
+        $(".work-entry:last").append(formattedHTMLworkDates);
+        $(".work-entry:last").append(formattedHTMLworkLocation);
+        $(".work-entry:last").append(formattedHTMLworkDescription);
+    }
 }
 
-
+displayWork();
 
 
 
@@ -238,6 +240,15 @@ $("#projects").append(formattedHTMLprojectDescription);
 
 
 
+
+
+/* OTHER */
+$(document).click(function(loc) {
+    var x = loc.pageX;
+    var y = loc.pageY;
+
+    logClicks(x,y);
+});
 
 
 

@@ -211,32 +211,58 @@ displayWork();
 
 /* PROJECTS */
 var projects = {
-    "portfolio" : {
-        "title" : "Jordan Ta Designs",
-        "dates" : "2013 - 2016",
-        "description" : "This website contains a sampling of projects I've built or worked on in the past.",
-        "images" : "images/JordanPortfolio.png"
-    },
-    "lighting" : {
-        "title" : "Cheap Lighting and Stage Designs",
-        "dates" : "2016 - present",
-        "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
-        "images" : "images/JordanPortfolio.png"
-    }
+    "projects" : [
+        {
+            "title" : "Jordan Ta Designs",
+            "dates" : "2013 - 2016",
+            "description" : "This website contains a sampling of projects I've built or worked on in the past.",
+            "images" : [
+                "images/JordanPortfolio.png",
+                "images/JordanPortfolio2.png"
+                ]
+        },
+        {
+            "title" : "Cheap Lighting and Stage Designs",
+            "dates" : "2016 - present",
+            "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
+            "images" : [
+                "images/JordanPortfolio.png"
+                ]
+        }
+    ],
+    "display" : "function"
 }
 
 
-var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.portfolio.title);
-var formattedHTMLprojectDates = HTMLprojectDates.replace("%data%", projects.portfolio.dates);
-var formattedHTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects.portfolio.description);
-var formattedHTMLprojectImage = HTMLprojectImage.replace("%data", projects.portfolio.images);
+projects.display = function() {
+    for (project in projects.projects) {
+        $("#projects").append(HTMLprojectStart);
+
+        var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
+        $(".project-entry:last").append(formattedHTMLprojectTitle);
+
+        var formattedHTMLprojectDates = HTMLprojectDates.replace("%data%", projects.projects[project].dates);
+        $(".project-entry:last").append(formattedHTMLprojectDates);
+
+        var formattedHTMLprojectDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
+        $(".project-entry:last").append(formattedHTMLprojectDescription);
+
+        if (projects.projects[project].images.length > 0) {
+            for (image in projects.projects[project].images) {
+                var formattedHTMLprojectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+                $(".project-entry:last").append(formattedHTMLprojectImage);
+                console.log("formattedHTMLprojectImage: " + formattedHTMLprojectImage);
+            }
+        }
+    }
+}
+
+projects.display();
 
 
-$("#projects").append(HTMLprojectStart);
-$("#projects").append(formattedHTMLprojectTitle);
-$("#projects").append(formattedHTMLprojectDates);
-$("#projects").append(formattedHTMLprojectDescription);
-//$("#projects").append(formattedHTMLprojectImage);
+
+
+
 
 
 
@@ -250,6 +276,20 @@ $(document).click(function(loc) {
     logClicks(x,y);
 });
 
+
+
+
+
+
+$("#main").append(internationalizeButton);
+
+var inName = function (name) {
+    var intName = name;
+    var intNameArray = name.split(" ");
+    var LName = intNameArray[1].toUpperCase();
+    var intName = intNameArray[0] + " " + LName;
+    return intName;
+}
 
 
 

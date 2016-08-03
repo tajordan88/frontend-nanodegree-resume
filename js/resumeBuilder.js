@@ -107,20 +107,24 @@ if (bio.skills != "") {
 
 /* EDUCATION */
 var education = {
-    "schools" : {
-        "name" : "University of California Riverside",
-        "location" : "Riverside, CA",
-        "degree" : "Bachelor of Science",
-        "major" : "Sociology",
-        "dates" : "2009 - 2013",
-        "url" : "http://www.ucr.edu/"
-    },
-    "onlineCourses" : {
-        "title" : "Front-End Nanodegree",
-        "school" : "Udacity",
-        "dates" : "2016 - present ",
-        "url" : "https://www.udacity.com/"
-    },
+    "schools" : [
+        {
+            "name" : "University of California Riverside",
+            "location" : "Riverside, CA",
+            "degree" : "Bachelor of Science",
+            "majors" : "Sociology",
+            "dates" : "2009 - 2013",
+            "url" : "http://www.ucr.edu/"
+        }
+    ],
+    "onlineCourses" : [
+        {
+            "title" : "Front-End Nanodegree",
+            "school" : "Udacity",
+            "dates" : "2016 - present ",
+            "url" : "https://www.udacity.com/"
+        }
+    ],
     "display" : "function"
 }
 
@@ -217,8 +221,8 @@ var projects = {
             "dates" : "2013 - 2016",
             "description" : "This website contains a sampling of projects I've built or worked on in the past.",
             "images" : [
-                "images/JordanPortfolio.png",
-                "images/JordanPortfolio2.png"
+                "images/JordanPortfolio380x250.jpg",
+                "images/JordanPortfolio2380x250.jpg"
                 ]
         },
         {
@@ -226,7 +230,7 @@ var projects = {
             "dates" : "2016 - present",
             "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
             "images" : [
-                "images/JordanPortfolio.png"
+                "images/Cheap_Lighting_And_Stage_Designs380x250.jpg"
                 ]
         }
     ],
@@ -251,7 +255,6 @@ projects.display = function() {
             for (image in projects.projects[project].images) {
                 var formattedHTMLprojectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".project-entry:last").append(formattedHTMLprojectImage);
-                console.log("formattedHTMLprojectImage: " + formattedHTMLprojectImage);
             }
         }
     }
@@ -262,7 +265,8 @@ projects.display();
 
 
 
-
+/* MAP */
+$("#mapDiv").append(googleMap);
 
 
 

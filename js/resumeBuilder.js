@@ -21,7 +21,7 @@ var bio = {
 }
 
 bio.display = function() {
-
+    /* HEADER */
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
@@ -55,6 +55,13 @@ bio.display = function() {
             $("#skills:last").append(formattedHTMLskills);
         }
     }
+
+    /* FOOTER */
+    $("#footerContacts").append(formattedHTMLmobile);
+    $("#footerContacts").append(formattedHTMLemail);
+    $("#footerContacts").append(formattedHTMLgithub);
+    $("#footerContacts").append(formattedHTMLblog);
+    $("#footerContacts").append(formattedHTMLlocation);
 }
 
 bio.display();

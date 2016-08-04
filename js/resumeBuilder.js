@@ -50,10 +50,10 @@ bio.display = function() {
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
-        for (var skill in bio.skills) {
-            var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[skill]);
-            $("#skills:last").append(formattedHTMLskills);
-        }
+            for (var skill in bio.skills) {
+              var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[skill]);
+              $("#skills:last").append(formattedHTMLskills);
+            }
     }
 
     /* FOOTER */
@@ -112,7 +112,7 @@ var education = {
 
 education.display = function() {
     /* Schools */
-    for (school in education.schools) {
+    for (var school in education.schools) {
         $("#education").append(HTMLschoolStart);
 
         var formattedHTMLschoolName = HTMLschoolName.replace("%data%", education.schools[school].name);
@@ -127,7 +127,7 @@ education.display = function() {
         $(".education-entry:last").append(formattedHTMLschoolLocation);
 
         if (education.schools[school].majors.length > 0) {
-            for (major in education.schools[school].majors) {
+            for (var major in education.schools[school].majors) {
                 var formattedHTMLschoolMajor = HTMLschoolMajor.replace("%data%", education.schools[school].majors[major]);
                 $(".education-entry:last").append(formattedHTMLschoolMajor);
             }
@@ -136,7 +136,7 @@ education.display = function() {
 
     /* Online Classes */
     $(".education-entry:last").append(HTMLonlineClasses);
-    for (onlineCourse in education.onlineCourses) {
+    for (var onlineCourse in education.onlineCourses) {
 
         var formattedHTMLonlineTitle = HTMLonlineTitle.replace("%data%", education.onlineCourses[onlineCourse].title);
         var formattedHTMLonlineSchool = HTMLonlineSchool.replace("%data%", education.onlineCourses[onlineCourse].school);
@@ -193,7 +193,7 @@ var work = {
 };
 
 var displayWork = function() {
-    for (job in work.jobs) {
+    for (var job in work.jobs) {
         $("#workExperience").append(HTMLworkStart);
 
         var formattedHTMLworkEmployer = HTMLworkEmployer.replace("%data%", work.jobs[job].employer);
@@ -240,7 +240,7 @@ var projects = {
 
 
 projects.display = function() {
-    for (project in projects.projects) {
+    for (var project in projects.projects) {
         $("#projects").append(HTMLprojectStart);
 
         var formattedHTMLprojectTitle = HTMLprojectTitle.replace("%data%", projects.projects[project].title);
@@ -253,7 +253,7 @@ projects.display = function() {
         $(".project-entry:last").append(formattedHTMLprojectDescription);
 
         if (projects.projects[project].images.length > 0) {
-            for (image in projects.projects[project].images) {
+            for (var image in projects.projects[project].images) {
                 var formattedHTMLprojectImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
                 $(".project-entry:last").append(formattedHTMLprojectImage);
             }
@@ -280,6 +280,11 @@ $(document).click(function(loc) {
 });
 
 
+
+
+
+
+
 /* INTERNATIONALIZE BUTTON */
 /*
 $("#main").append(internationalizeButton);
@@ -292,3 +297,10 @@ var inName = function (name) {
     return intName;
 }
 */
+
+
+
+
+
+
+

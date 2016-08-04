@@ -18,14 +18,14 @@ var bio = {
     ],
     "biopic" : "images/jordan.jpg",
     "display" : "function"
-}
+};
 
 bio.display = function() {
     /* HEADER */
     var formattedName = HTMLheaderName.replace("%data%", bio.name);
     var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-    var formattedContactInfo = HTMLcontactGeneric.replace("%contact%", bio.name).replace("%data%", bio.role);
+    // var formattedContactInfo = HTMLcontactGeneric.replace("%contact%", bio.name).replace("%data%", bio.role);
     var formattedHTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
     var formattedHTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
     var formattedHTMLgithub = HTMLgithub.replace("%data%", bio.contacts.github);
@@ -50,7 +50,7 @@ bio.display = function() {
 
     if (bio.skills.length > 0) {
         $("#header").append(HTMLskillsStart);
-        for (skill in bio.skills) {
+        for (var skill in bio.skills) {
             var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[skill]);
             $("#skills:last").append(formattedHTMLskills);
         }
@@ -62,7 +62,7 @@ bio.display = function() {
     $("#footerContacts").append(formattedHTMLgithub);
     $("#footerContacts").append(formattedHTMLblog);
     $("#footerContacts").append(formattedHTMLlocation);
-}
+};
 
 bio.display();
 
@@ -107,7 +107,7 @@ var education = {
         }
     ],
     "display" : "function"
-}
+};
 
 
 education.display = function() {
@@ -149,7 +149,7 @@ education.display = function() {
         var formattedHTMLonlineURL = HTMLonlineURL.replace("%data%", education.onlineCourses[onlineCourse].url);
         $(".education-entry:last").append(formattedHTMLonlineURL);
     }
-}
+};
 
 education.display();
 
@@ -190,7 +190,7 @@ var work = {
         }
         ],
     "display" : "function"
-}
+};
 
 var displayWork = function() {
     for (job in work.jobs) {
@@ -208,7 +208,7 @@ var displayWork = function() {
         $(".work-entry:last").append(formattedHTMLworkLocation);
         $(".work-entry:last").append(formattedHTMLworkDescription);
     }
-}
+};
 
 displayWork();
 
@@ -236,7 +236,7 @@ var projects = {
         }
     ],
     "display" : "function"
-}
+};
 
 
 projects.display = function() {
@@ -259,7 +259,7 @@ projects.display = function() {
             }
         }
     }
-}
+};
 
 projects.display();
 
@@ -280,11 +280,6 @@ $(document).click(function(loc) {
 });
 
 
-
-
-
-
-
 /* INTERNATIONALIZE BUTTON */
 /*
 $("#main").append(internationalizeButton);
@@ -297,10 +292,3 @@ var inName = function (name) {
     return intName;
 }
 */
-
-
-
-
-
-
-

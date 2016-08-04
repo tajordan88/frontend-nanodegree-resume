@@ -1,45 +1,3 @@
-/*
-$("#main").append(["Jordan Ta"]);
-
-var awesomeThoughts = "I am Jordan and I am AWESOME!";
-
-console.log(awesomeThoughts);
-
-var funThoughts = awesomeThoughts.replace("AWESOME", "FUN");
-
-$("#main").append([funThoughts]);
-
-
-var formattedName = HTMLheaderName.replace("%data%", "Jordan Ta");
-
-var role = "Web Developer";
-var formattedRole = HTMLheaderRole.replace("%data%", role);
-
-$("#header").prepend([formattedRole]);
-$("#header").prepend([formattedName]);
-
-
-
-var sample = ["one", "two", "three"];
-
-console.log(sample.length);
-
-*/
-
-
-
-
-/* SKILLS */
-var skills = [
-    "HTML",
-    "CSS",
-    "Javascript",
-    "Bootstrap"
-]
-
-
-
-
 /* BIO */
 var bio = {
     "name" : "Jordan Ta",
@@ -52,56 +10,54 @@ var bio = {
         "location" : "Riverside, CA"
     },
     "welcomeMessage" : "Welcome to Jordan Ta's Designs!",
-    "skills" : skills,
+    "skills" : [
+        "HTML",
+        "CSS",
+        "Javascript",
+        "Bootstrap"
+    ],
     "biopic" : "images/jordan.jpg",
     "display" : "function"
 }
 
-var formattedName = HTMLheaderName.replace("%data%", bio.name);
-var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
-var formattedContactInfo = HTMLcontactGeneric.replace("%contact%", bio.name).replace("%data%", bio.role);
+bio.display = function() {
 
-var formattedHTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
-var formattedHTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
-var formattedHTMLgithub = HTMLgithub.replace("%data%", bio.contacts.github);
-var formattedHTMLblog = HTMLblog.replace("%data%", bio.contacts.blog);
-var formattedHTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
+    var formattedName = HTMLheaderName.replace("%data%", bio.name);
+    var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
 
-var formattedHTMLbioPic = HTMLbioPic.replace("%data%", bio.biopic);
-var formattedHTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
+    var formattedContactInfo = HTMLcontactGeneric.replace("%contact%", bio.name).replace("%data%", bio.role);
+    var formattedHTMLmobile = HTMLmobile.replace("%data%", bio.contacts.mobile);
+    var formattedHTMLemail = HTMLemail.replace("%data%", bio.contacts.email);
+    var formattedHTMLgithub = HTMLgithub.replace("%data%", bio.contacts.github);
+    var formattedHTMLblog = HTMLblog.replace("%data%", bio.contacts.blog);
+    var formattedHTMLlocation = HTMLlocation.replace("%data%", bio.contacts.location);
 
-var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills);
-
-
-$("#header").prepend(formattedRole);
-$("#header").prepend(formattedName);
-$("#header").append(formattedHTMLwelcomeMsg);
-
-$("#topContacts").append(formattedHTMLmobile);
-$("#topContacts").append(formattedHTMLemail);
-$("#topContacts").append(formattedHTMLgithub);
-$("#topContacts").append(formattedHTMLblog);
-$("#topContacts").append(formattedHTMLlocation);
-$("#header").append(formattedHTMLbioPic);
+    var formattedHTMLbioPic = HTMLbioPic.replace("%data%", bio.biopic);
+    var formattedHTMLwelcomeMsg = HTMLwelcomeMsg.replace("%data%", bio.welcomeMessage);
 
 
+    $("#header").prepend(formattedRole);
+    $("#header").prepend(formattedName);
 
-/* SKILLS */
-//$("#header").append(HTMLskillsStart);
-//$("#header").append(formattedHTMLskills);
+    $("#topContacts").append(formattedHTMLmobile);
+    $("#topContacts").append(formattedHTMLemail);
+    $("#topContacts").append(formattedHTMLgithub);
+    $("#topContacts").append(formattedHTMLblog);
+    $("#topContacts").append(formattedHTMLlocation);
 
-var formattedHTMLskills0 = HTMLskills.replace("%data%", skills[0]);
-var formattedHTMLskills1 = HTMLskills.replace("%data%", skills[1]);
-var formattedHTMLskills2 = HTMLskills.replace("%data%", skills[2]);
-var formattedHTMLskills3 = HTMLskills.replace("%data%", skills[3]);
+    $("#header").append(formattedHTMLbioPic);
+    $("#header").append(formattedHTMLwelcomeMsg);
 
-if (bio.skills != "") {
-    $("#header").append(HTMLskillsStart);
-    $("#skills-h3").append(formattedHTMLskills0);
-    $("#skills-h3").append(formattedHTMLskills1);
-    $("#skills-h3").append(formattedHTMLskills2);
-    $("#skills-h3").append(formattedHTMLskills3);
+    if (bio.skills.length > 0) {
+        $("#header").append(HTMLskillsStart);
+        for (skill in bio.skills) {
+            var formattedHTMLskills = HTMLskills.replace("%data%", bio.skills[skill]);
+            $("#skills:last").append(formattedHTMLskills);
+        }
+    }
 }
+
+bio.display();
 
 
 

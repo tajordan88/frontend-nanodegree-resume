@@ -1,8 +1,8 @@
 /* COLLISION DETECTION */
 // Mike Bostock’s Block 3231298 - http://bl.ocks.org/mbostock/3231298
 
-var width = 400,
-    height = 200;
+var width = 1060,
+    height = 100;
 
 var nodes = d3.range(200).map(function() { return {radius: Math.random() * 12 + 4}; }),
     root = nodes[0],

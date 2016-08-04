@@ -308,9 +308,7 @@ $("#mapDiv").append(googleMap);
 
 
 
-
-
-/* OTHER */
+/* LOG CLICKS */
 $(document).click(function(loc) {
     var x = loc.pageX;
     var y = loc.pageY;
@@ -323,6 +321,9 @@ $(document).click(function(loc) {
 
 
 
+
+/* INTERNATIONALIZE BUTTON */
+/*
 $("#main").append(internationalizeButton);
 
 var inName = function (name) {
@@ -332,15 +333,10 @@ var inName = function (name) {
     var intName = intNameArray[0] + " " + LName;
     return intName;
 }
-
-
-
-
-/*
-for (var i=0; i<9; i++) {
-    console.log(i);
-}
 */
+
+
+
 
 
 

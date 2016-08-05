@@ -1,23 +1,23 @@
 /* BIO */
 var bio = {
-    "name" : "Jordan Ta",
-    "role" : "Web Developer",
-    "contacts" : {
-        "mobile" : "(661) 932-6590",
-        "email" : "tajordan88@gmail.com",
-        "github" : "https://github.com/tajordan88",
-        "blog" : "www.jordantadesigns.com",
-        "location" : "Riverside, CA"
+    "name": "Jordan Ta",
+    "role": "Web Developer",
+    "contacts": {
+        "mobile": "(661) 932-6590",
+        "email": "tajordan88@gmail.com",
+        "github": "https://github.com/tajordan88",
+        "blog": "www.jordantadesigns.com",
+        "location": "Riverside, CA"
     },
-    "welcomeMessage" : "Welcome to Jordan Ta's Designs!",
-    "skills" : [
+    "welcomeMessage": "Welcome to Jordan Ta's Designs!",
+    "skills": [
         "HTML",
         "CSS",
         "Javascript",
         "Bootstrap"
     ],
-    "biopic" : "images/jordan.jpg",
-    "display" : "function"
+    "biopic": "images/jordan.jpg",
+    "display": "function"
 };
 
 bio.display = function() {
@@ -72,43 +72,37 @@ bio.display();
 
 /* EDUCATION */
 var education = {
-    "schools" : [
-        {
-            "name" : "Udacity",
-            "location" : "Online",
-            "degree" : "Nanodegree",
-            "majors" : [
-                "Front-End Web Developer"
-                ],
-            "dates" : "Feb 2016 - present",
-            "url" : "https://www.udacity.com/"
-        },
-        {
-            "name" : "University of California Riverside",
-            "location" : "Riverside, CA",
-            "degree" : "Bachelor of Science",
-            "majors" : [
-                    "Sociology"
-                ],
-            "dates" : "2009 - 2013",
-            "url" : "http://www.ucr.edu/"
-        }
-    ],
-    "onlineCourses" : [
-        {
-            "title" : "Responsive Web Design",
-            "school" : "Udacity",
-            "dates" : "Feb 2016 - Mar 2016",
-            "url" : "https://www.udacity.com/"
-        },
-        {
-            "title" : "Github",
-            "school" : "Udacity",
-            "dates" : "Feb 2016 - Mar 2016",
-            "url" : "https://www.udacity.com/"
-        }
-    ],
-    "display" : "function"
+    "schools": [{
+        "name": "Udacity",
+        "location": "Online",
+        "degree": "Nanodegree",
+        "majors": [
+            "Front-End Web Developer"
+        ],
+        "dates": "Feb 2016 - present",
+        "url": "https://www.udacity.com/"
+    }, {
+        "name": "University of California Riverside",
+        "location": "Riverside, CA",
+        "degree": "Bachelor of Science",
+        "majors": [
+            "Sociology"
+        ],
+        "dates": "2009 - 2013",
+        "url": "http://www.ucr.edu/"
+    }],
+    "onlineCourses": [{
+        "title": "Responsive Web Design",
+        "school": "Udacity",
+        "dates": "Feb 2016 - Mar 2016",
+        "url": "https://www.udacity.com/"
+    }, {
+        "title": "Github",
+        "school": "Udacity",
+        "dates": "Feb 2016 - Mar 2016",
+        "url": "https://www.udacity.com/"
+    }],
+    "display": "function"
 };
 
 
@@ -157,40 +151,34 @@ education.display();
 
 
 
-
 /* WORK */
 var work = {
-    "jobs" : [
-        {
-            "employer" : "Creedenz Solutions",
-            "title" : "Programmer Analyst",
-            "location" : "Riverside, CA",
-            "dates" : "February 2015 - June 2016",
-            "description" : "Developed custom CRM (Customer Relationship Management) systems for clients using MySQL and Javascript."
-        },
-        {
-            "employer" : "Database Marketing Group",
-            "title" : "Dynamic Media Developer",
-            "location" : "Irvine, CA",
-            "dates" : "April 2014 - December 2014",
-            "description" : "Customized and quality assured HTML and CSS for emails, testing cross-email client/cross-browser/cross-device quality of responsive design for large clients such as BudgetBlinds, and internally for McDonalds, and Subway."
-        },
-        {
-            "employer" : "Acts2Fellowship",
-            "title" : "Assistant Web Developer (Internship Completed)",
-            "location" : "Riverside, CA",
-            "dates" : "March 2013 - April 2014",
-            "description" : "Developed a responsive splash page using HTML, CSS, PHP, and Twitter Bootstrap."
-        },
-        {
-            "employer" : "Contego Spa Designs",
-            "title" : "Web Developer/Marketing Assistant (Contract Position Completed)",
-            "location" : "Westminster, CA",
-            "dates" : "August 2013 - January 2014",
-            "description" : "Designed and built front page banners, uploading using Wordpress CMS."
-        }
-        ],
-    "display" : "function"
+    "jobs": [{
+        "employer": "Creedenz Solutions",
+        "title": "Programmer Analyst",
+        "location": "Riverside, CA",
+        "dates": "February 2015 - June 2016",
+        "description": "Developed custom CRM (Customer Relationship Management) systems for clients using MySQL and Javascript."
+    }, {
+        "employer": "Database Marketing Group",
+        "title": "Dynamic Media Developer",
+        "location": "Irvine, CA",
+        "dates": "April 2014 - December 2014",
+        "description": "Customized and quality assured HTML and CSS for emails, testing cross-email client/cross-browser/cross-device quality of responsive design for large clients such as BudgetBlinds, and internally for McDonalds, and Subway."
+    }, {
+        "employer": "Acts2Fellowship",
+        "title": "Assistant Web Developer (Internship Completed)",
+        "location": "Riverside, CA",
+        "dates": "March 2013 - April 2014",
+        "description": "Developed a responsive splash page using HTML, CSS, PHP, and Twitter Bootstrap."
+    }, {
+        "employer": "Contego Spa Designs",
+        "title": "Web Developer/Marketing Assistant (Contract Position Completed)",
+        "location": "Westminster, CA",
+        "dates": "August 2013 - January 2014",
+        "description": "Designed and built front page banners, uploading using Wordpress CMS."
+    }],
+    "display": "function"
 };
 
 var displayWork = function() {
@@ -217,26 +205,23 @@ displayWork();
 
 /* PROJECTS */
 var projects = {
-    "projects" : [
-        {
-            "title" : "Jordan Ta Designs",
-            "dates" : "2013 - 2016",
-            "description" : "This website contains a sampling of projects I've built or worked on in the past.",
-            "images" : [
-                "images/JordanPortfolio380x250.jpg",
-                "images/JordanPortfolio2380x250.jpg"
-                ]
-        },
-        {
-            "title" : "Cheap Lighting and Stage Designs",
-            "dates" : "2016 - present",
-            "description" : "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
-            "images" : [
-                "images/Cheap_Lighting_And_Stage_Designs380x250.jpg"
-                ]
-        }
-    ],
-    "display" : "function"
+    "projects": [{
+        "title": "Jordan Ta Designs",
+        "dates": "2013 - 2016",
+        "description": "This website contains a sampling of projects I've built or worked on in the past.",
+        "images": [
+            "images/JordanPortfolio380x250.jpg",
+            "images/JordanPortfolio2380x250.jpg"
+        ]
+    }, {
+        "title": "Cheap Lighting and Stage Designs",
+        "dates": "2016 - present",
+        "description": "This website contains all the basics of beginning stage and lighting, providing examples of cheap and affordable options for lighting and stage design.",
+        "images": [
+            "images/Cheap_Lighting_And_Stage_Designs380x250.jpg"
+        ]
+    }],
+    "display": "function"
 };
 
 
@@ -277,11 +262,8 @@ $(document).click(function(loc) {
     var x = loc.pageX;
     var y = loc.pageY;
 
-    logClicks(x,y);
+    logClicks(x, y);
 });
-
-
-
 
 
 
@@ -298,10 +280,3 @@ var inName = function (name) {
     return intName;
 }
 */
-
-
-
-
-
-
-

@@ -42,11 +42,11 @@ bio.display = function() {
     $("#header").prepend(formattedRole);
     $("#header").prepend(formattedName);
 
-    $("#topContacts").append(formattedHTMLmobile);
-    $("#topContacts").append(formattedHTMLemail);
-    $("#topContacts").append(formattedHTMLgithub);
-    $("#topContacts").append(formattedHTMLblog);
-    $("#topContacts").append(formattedHTMLlocation);
+    $("#topContacts, #footerContacts").append(formattedHTMLmobile);
+    $("#topContacts, #footerContacts").append(formattedHTMLemail);
+    $("#topContacts, #footerContacts").append(formattedHTMLgithub);
+    $("#topContacts, #footerContacts").append(formattedHTMLblog);
+    $("#topContacts, #footerContacts").append(formattedHTMLlocation);
 
     $("#header").append(formattedHTMLbioPic);
     $("#header").append(formattedHTMLwelcomeMsg);
@@ -58,15 +58,6 @@ bio.display = function() {
             $("#skills:last").append(formattedHTMLskills);
         }
     }
-
-
-
-    /* FOOTER */
-    $("#footerContacts").append(formattedHTMLmobile);
-    $("#footerContacts").append(formattedHTMLemail);
-    $("#footerContacts").append(formattedHTMLgithub);
-    $("#footerContacts").append(formattedHTMLblog);
-    $("#footerContacts").append(formattedHTMLlocation);
 };
 
 bio.display();

@@ -175,7 +175,7 @@ var work = {
     "display": "function"
 };
 
-var displayWork = function() {
+work.display = function() {
     for (i = 0; i < work.jobs.length; i++) {
         $("#workExperience").append(HTMLworkStart);
 
@@ -193,7 +193,7 @@ var displayWork = function() {
     }
 };
 
-displayWork();
+work.display();
 
 
 
